@@ -1,0 +1,6 @@
+{ "name":"BasicAuth API", 
+  "version":"1.0", 
+  "description":"Extension to handle basic authentication window", 
+  "permissions":["<all_urls>","webRequest","webRequestBlocking"], 
+  "background": { "scripts" : ["basicauth.js"] }, 
+  "manifest_version": 2 }
