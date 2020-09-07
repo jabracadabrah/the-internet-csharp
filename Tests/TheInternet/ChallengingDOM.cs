@@ -51,5 +51,22 @@ namespace Tests.TheInternet
             Pages.Challenging_Dom.Map.GreenButton.Should().HaveColor("border-color", "#457a1a");
             Pages.Challenging_Dom.Map.GreenButton.Should().HaveColor("color", "white");
         }
+
+        [Test]
+        public void TableLinksTest()
+        {
+            Pages.Challenging_Dom.Goto();
+
+            Pages.Challenging_Dom.EditLink(0).DeleteLink(0)
+                                 .EditLink(1).DeleteLink(1)
+                                 .EditLink(2).DeleteLink(2)
+                                 .EditLink(3).DeleteLink(3)
+                                 .EditLink(4).DeleteLink(4)
+                                 .EditLink(5).DeleteLink(5)
+                                 .EditLink(6).DeleteLink(6)
+                                 .EditLink(7).DeleteLink(7)
+                                 .EditLink(8).DeleteLink(8)
+                                 .EditLink(9).DeleteLink(9);
+        }
     }
 }
