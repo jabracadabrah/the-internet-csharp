@@ -18,7 +18,7 @@ namespace Framework.Assertions
         public void BePresent()
         {
             Assert.That(_element.Displayed);
-            ExtentTestManager.Log(ExtentTestManager.LogStatus.Info, $"Assertion Passed: {_element.Name} is present");
+            ExtentTestManager.Log(ExtentTestManager.LogStatus.Pass, $"Assertion Passed: {_element.Name} is present");
         }
 
         public void HaveColor(string css, string expectedhexcolor)
@@ -27,22 +27,22 @@ namespace Framework.Assertions
             int r = Convert.ToInt16(color.R);
             int g = Convert.ToInt16(color.G);
             int b = Convert.ToInt16(color.B);
-            string expectedcolor = string.Format("rgba({0}, {1}, {2}", r, g, b);
+            string expectedcolor = string.Format("{0}, {1}, {2}", r, g, b);
             string elementcolor = _element.GetCssValue(css);
             Assert.That(elementcolor.Contains(expectedcolor));
-            ExtentTestManager.Log(ExtentTestManager.LogStatus.Info, $"Assertion Passed: {_element.Name}'s color matches {expectedhexcolor}");
+            ExtentTestManager.Log(ExtentTestManager.LogStatus.Pass, $"Assertion Passed: {_element.Name}'s color matches {expectedhexcolor}");
         }
 
         public void NotBePresent()
         {
             Assert.That(_element == null);
-            ExtentTestManager.Log(ExtentTestManager.LogStatus.Info, $"Assertion Passed: {_element.Name} is not present");
+            ExtentTestManager.Log(ExtentTestManager.LogStatus.Pass, $"Assertion Passed: {_element.Name} is not present");
         }
 
         public void NotHaveBrokenImage()
         {
             StringAssert.AreNotEqualIgnoringCase(_element.GetAttribute("naturalWidth"), "0");
-            ExtentTestManager.Log(ExtentTestManager.LogStatus.Info, $"Assertion Passed: {_element.Name}'s image is not broken");
+            ExtentTestManager.Log(ExtentTestManager.LogStatus.Pass, $"Assertion Passed: {_element.Name}'s image is not broken");
         }
     }
 }
