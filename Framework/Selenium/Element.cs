@@ -124,10 +124,8 @@ namespace Framework.Selenium
         //Hovers the mouse cursor over the element
         public void Hover()
         {
-            By by = this.FoundBy;
-            RemoteWebElement element = (RemoteWebElement)Current.FindElement(by);
             Actions action = new Actions(Driver.Current);
-            action.MoveToElement(element).Perform();
+            action.MoveToElement(Current).Perform();
         }
     }
 }

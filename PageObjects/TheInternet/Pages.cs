@@ -18,6 +18,9 @@ namespace PageObjects.TheInternet
         [ThreadStatic]
         public static Broken_ImagesPage Broken_Images;
 
+        [ThreadStatic]
+        public static Challenging_DomPage Challenging_Dom;
+
         public static void Init()
         {
             Add_Remove_Elements = new Add_Remove_ElementsPage();
@@ -25,6 +28,8 @@ namespace PageObjects.TheInternet
             Basic_Auth = new Basic_AuthPage();
 
             Broken_Images = new Broken_ImagesPage();
+
+            Challenging_Dom = new Challenging_DomPage();
         }
     }
 }

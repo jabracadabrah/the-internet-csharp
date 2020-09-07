@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TheInternet\Challenging_DomPage.cs" />
     <Compile Include="TheInternet\Basic_AuthPage.cs" />
     <Compile Include="TheInternet\Add_Remove_ElementsPage.cs" />
     <Compile Include="TheInternet\BasePage.cs" />
