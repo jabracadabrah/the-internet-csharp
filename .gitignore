@@ -3,3 +3,11 @@
 ################################################################################
 
 /.vs
+/Framework/bin/Debug
+/Framework/obj
+/packages
+/PageObjects/.vs/PageObjects/v16
+/PageObjects/bin/Debug
+/PageObjects/obj/Debug
+/Tests/bin/Debug
+/Tests/obj
