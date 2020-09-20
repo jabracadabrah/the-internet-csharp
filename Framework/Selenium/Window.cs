@@ -17,12 +17,14 @@ namespace Framework.Selenium
 
         public static void SwitchToWindow(string pagename, int prevwincount = 0)
         {
+            var _currentwindows = CurrentWindows;
+
             if (prevwincount > 0)
             {
                 Driver.WaitForNewWindow(prevwincount);
             }
 
-            foreach (string s in CurrentWindows)
+            foreach (string s in _currentwindows)
             {
                 try
                 {
@@ -34,7 +36,7 @@ namespace Framework.Selenium
                             ExtentTestManager.Log(ExtentTestManager.LogStatus.Info, $"Switched to window that contains {pagename}");
                             break;
                         }
-                        else
+                        else if (s == _currentwindows.Last())
                         {
                             throw new Exception($"No window found with {pagename} in URL");
                         }
