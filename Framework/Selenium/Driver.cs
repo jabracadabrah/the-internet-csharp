@@ -1,4 +1,5 @@
-﻿using Framework.ExtentReport;
+﻿using AutoIt;
+using Framework.ExtentReport;
 using Framework.Utils;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
@@ -245,6 +246,12 @@ namespace Framework.Selenium
             {
                 FoundBy = by
             };
+        }
+
+        //Moves mouse to specific location, useful for outside of browser
+        public static void MoveMouse(int x, int y)
+        {
+            AutoItX.MouseMove(x, y);
         }
     }
 }

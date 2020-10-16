@@ -21,6 +21,12 @@ namespace Framework.Assertions
             ExtentTestManager.Log(ExtentTestManager.LogStatus.Pass, $"Assertion Passed: {_element.Name} is present");
         }
 
+        public void BeSelected()
+        {
+            Assert.That(_element.Selected);
+            ExtentTestManager.Log(ExtentTestManager.LogStatus.Pass, $"Assertion Passed: {_element.Name} is selected");
+        }
+
         public void HaveColor(string css, string expectedhexcolor)
         {
             Color color = ColorTranslator.FromHtml(expectedhexcolor);
@@ -33,10 +39,22 @@ namespace Framework.Assertions
             ExtentTestManager.Log(ExtentTestManager.LogStatus.Pass, $"Assertion Passed: {_element.Name}'s color matches {expectedhexcolor}");
         }
 
+        public void NotBeDisplayed()
+        {
+            Assert.That(!_element.Displayed);
+            ExtentTestManager.Log(ExtentTestManager.LogStatus.Pass, $"Assertion Passed: {_element.Name} is not present");
+        }
+
         public void NotBePresent()
         {
             Assert.That(_element == null);
             ExtentTestManager.Log(ExtentTestManager.LogStatus.Pass, $"Assertion Passed: {_element.Name} is not present");
+        }
+
+        public void NotBeSelected()
+        {
+            Assert.That(!_element.Selected);
+            ExtentTestManager.Log(ExtentTestManager.LogStatus.Pass, $"Assertion Passed: {_element.Name} is not selected");
         }
 
         public void NotHaveBrokenImage()
