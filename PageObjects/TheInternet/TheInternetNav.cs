@@ -31,6 +31,11 @@ namespace PageObjects.TheInternet
         {
             Driver.WaitForVisibility(Map.ChallengingDOM).Click();
         }
+
+        public void GoToCheckboxesPage()
+        {
+            Driver.WaitForVisibility(Map.Checkboxes).Click();
+        }
     }
 
     public class TheInternetNavMap
@@ -42,6 +47,8 @@ namespace PageObjects.TheInternet
         public Element BrokenImages => Driver.FindElement(By.LinkText("Broken Images"), "Broken Images");
 
         public Element ChallengingDOM => Driver.FindElement(By.LinkText("Challenging DOM"), "Challenging DOM");
+
+        public Element Checkboxes => Driver.FindElement(By.LinkText("Checkboxes"), "Checkboxes");
 
         public Element ForkMeOnGitHub => Driver.FindElement(By.CssSelector("[alt='Fork me on GitHub']"), "Fork me on Github");
 
