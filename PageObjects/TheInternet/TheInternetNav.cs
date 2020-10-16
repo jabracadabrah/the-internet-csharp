@@ -36,6 +36,11 @@ namespace PageObjects.TheInternet
         {
             Driver.WaitForVisibility(Map.Checkboxes).Click();
         }
+
+        public void GoToExitIntentPage()
+        {
+            Driver.WaitForVisibility(Map.ExitIntent).Click();
+        }
     }
 
     public class TheInternetNavMap
@@ -49,6 +54,8 @@ namespace PageObjects.TheInternet
         public Element ChallengingDOM => Driver.FindElement(By.LinkText("Challenging DOM"), "Challenging DOM");
 
         public Element Checkboxes => Driver.FindElement(By.LinkText("Checkboxes"), "Checkboxes");
+
+        public Element ExitIntent => Driver.FindElement(By.LinkText("Exit Intent"), "Exit Intent");
 
         public Element ForkMeOnGitHub => Driver.FindElement(By.CssSelector("[alt='Fork me on GitHub']"), "Fork me on Github");
 

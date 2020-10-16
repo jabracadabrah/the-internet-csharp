@@ -24,6 +24,9 @@ namespace PageObjects.TheInternet
         [ThreadStatic]
         public static CheckboxesPage Checkboxes;
 
+        [ThreadStatic]
+        public static ExitIntentPage ExitIntent;
+
         public static void Init()
         {
             Add_Remove_Elements = new Add_Remove_ElementsPage();
@@ -35,6 +38,8 @@ namespace PageObjects.TheInternet
             Challenging_Dom = new Challenging_DomPage();
 
             Checkboxes = new CheckboxesPage();
+
+            ExitIntent = new ExitIntentPage();
         }
     }
 }
