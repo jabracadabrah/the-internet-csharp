@@ -39,6 +39,12 @@ namespace Framework.Assertions
             ExtentTestManager.Log(ExtentTestManager.LogStatus.Pass, $"Assertion Passed: {_element.Name}'s color matches {expectedhexcolor}");
         }
 
+        public void NotBeDisplayed()
+        {
+            Assert.That(!_element.Displayed);
+            ExtentTestManager.Log(ExtentTestManager.LogStatus.Pass, $"Assertion Passed: {_element.Name} is not present");
+        }
+
         public void NotBePresent()
         {
             Assert.That(_element == null);
