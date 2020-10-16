@@ -41,14 +41,14 @@ namespace Framework.Assertions
 
         public void NotBePresent()
         {
-            Assert.That(!_element.Selected);
-            ExtentTestManager.Log(ExtentTestManager.LogStatus.Pass, $"Assertion Passed: {_element.Name} is not selected");
+            Assert.That(_element == null);
+            ExtentTestManager.Log(ExtentTestManager.LogStatus.Pass, $"Assertion Passed: {_element.Name} is not present");
         }
 
         public void NotBeSelected()
         {
-            Assert.That(_element == null);
-            ExtentTestManager.Log(ExtentTestManager.LogStatus.Pass, $"Assertion Passed: {_element.Name} is not present");
+            Assert.That(!_element.Selected);
+            ExtentTestManager.Log(ExtentTestManager.LogStatus.Pass, $"Assertion Passed: {_element.Name} is not selected");
         }
 
         public void NotHaveBrokenImage()
