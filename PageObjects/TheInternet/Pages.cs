@@ -21,6 +21,9 @@ namespace PageObjects.TheInternet
         [ThreadStatic]
         public static Challenging_DomPage Challenging_Dom;
 
+        [ThreadStatic]
+        public static CheckboxesPage Checkboxes;
+
         public static void Init()
         {
             Add_Remove_Elements = new Add_Remove_ElementsPage();
@@ -30,6 +33,8 @@ namespace PageObjects.TheInternet
             Broken_Images = new Broken_ImagesPage();
 
             Challenging_Dom = new Challenging_DomPage();
+
+            Checkboxes = new CheckboxesPage();
         }
     }
 }
