@@ -1,5 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 using System.Drawing;
+using System.Threading;
 using Framework.Assertions;
 using Framework.ExtentReport;
 using OpenQA.Selenium;
@@ -126,6 +127,7 @@ namespace Framework.Selenium
         {
             Actions action = new Actions(Driver.Current);
             action.MoveToElement(Current).Perform();
+            Thread.Sleep(500);
         }
     }
 }
