@@ -37,11 +37,6 @@ namespace PageObjects.TheInternet
             Driver.WaitForVisibility(Map.Checkboxes).Click();
         }
 
-        public void GoToContextMenuPage()
-        {
-            Driver.WaitForVisibility(Map.ContextMenu).Click();
-        }
-
         public void GoToExitIntentPage()
         {
             Driver.WaitForVisibility(Map.ExitIntent).Click();
@@ -59,8 +54,6 @@ namespace PageObjects.TheInternet
         public Element ChallengingDOM => Driver.FindElement(By.LinkText("Challenging DOM"), "Challenging DOM");
 
         public Element Checkboxes => Driver.FindElement(By.LinkText("Checkboxes"), "Checkboxes");
-
-        public Element ContextMenu => Driver.FindElement(By.LinkText("Context Menu"), "Context Menu");
 
         public Element ExitIntent => Driver.FindElement(By.LinkText("Exit Intent"), "Exit Intent");
 

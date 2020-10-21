@@ -25,9 +25,6 @@ namespace PageObjects.TheInternet
         public static CheckboxesPage Checkboxes;
 
         [ThreadStatic]
-        public static Context_MenuPage Context_Menu;
-
-        [ThreadStatic]
         public static ExitIntentPage ExitIntent;
 
         public static void Init()
@@ -41,8 +38,6 @@ namespace PageObjects.TheInternet
             Challenging_Dom = new Challenging_DomPage();
 
             Checkboxes = new CheckboxesPage();
-
-            Context_Menu = new Context_MenuPage();
 
             ExitIntent = new ExitIntentPage();
         }

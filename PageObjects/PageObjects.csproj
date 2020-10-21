@@ -44,7 +44,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TheInternet\Context_MenuPage.cs" />
     <Compile Include="TheInternet\ExitIntent.cs" />
     <Compile Include="TheInternet\CheckboxesPage.cs" />
     <Compile Include="TheInternet\Challenging_DomPage.cs" />
