@@ -129,5 +129,12 @@ namespace Framework.Selenium
             action.MoveToElement(Current).Perform();
             Thread.Sleep(500);
         }
+
+        //Right clicks an element to show context menu
+        public void RightClick()
+        {
+            Actions actions = new Actions(Driver.Current);
+            actions.ContextClick(Current).Perform();
+        }
     }
 }
