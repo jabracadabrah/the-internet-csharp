@@ -28,6 +28,9 @@ namespace PageObjects.TheInternet
         public static Context_MenuPage Context_Menu;
 
         [ThreadStatic]
+        public static Digest_AuthPage Digest_Auth;
+
+        [ThreadStatic]
         public static ExitIntentPage ExitIntent;
 
         public static void Init()
@@ -43,6 +46,8 @@ namespace PageObjects.TheInternet
             Checkboxes = new CheckboxesPage();
 
             Context_Menu = new Context_MenuPage();
+
+            Digest_Auth = new Digest_AuthPage();
 
             ExitIntent = new ExitIntentPage();
         }

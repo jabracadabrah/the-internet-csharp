@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TheInternet\Digest_AuthPage.cs" />
     <Compile Include="TheInternet\Context_MenuPage.cs" />
     <Compile Include="TheInternet\ExitIntent.cs" />
     <Compile Include="TheInternet\CheckboxesPage.cs" />
