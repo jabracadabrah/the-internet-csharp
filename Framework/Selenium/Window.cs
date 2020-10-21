@@ -77,5 +77,12 @@ namespace Framework.Selenium
         {
             Driver.Current.SwitchTo().Alert().Accept();
         }
+
+        public static string AlertText()
+        {
+            string text = Driver.Current.SwitchTo().Alert().Text;
+
+            return text;
+        }
     }
 }
