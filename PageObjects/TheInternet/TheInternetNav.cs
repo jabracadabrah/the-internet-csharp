@@ -42,6 +42,11 @@ namespace PageObjects.TheInternet
             Driver.WaitForVisibility(Map.ContextMenu).Click();
         }
 
+        public void GoToDigestAuthPage()
+        {
+            Driver.WaitForVisibility(Map.DigestAuth).Click();
+        }
+
         public void GoToExitIntentPage()
         {
             Driver.WaitForVisibility(Map.ExitIntent).Click();
@@ -61,6 +66,8 @@ namespace PageObjects.TheInternet
         public Element Checkboxes => Driver.FindElement(By.LinkText("Checkboxes"), "Checkboxes");
 
         public Element ContextMenu => Driver.FindElement(By.LinkText("Context Menu"), "Context Menu");
+
+        public Element DigestAuth => Driver.FindElement(By.LinkText("Digest Authentication"), "Digest Authentication");
 
         public Element ExitIntent => Driver.FindElement(By.LinkText("Exit Intent"), "Exit Intent");
 
